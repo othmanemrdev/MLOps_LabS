@@ -135,7 +135,7 @@ def predict(req: PredictRequest) -> dict[str, Any]:
         ) from exc
     latency_ms = (time.perf_counter() - start) * 1000.0
 
-    # --- Gestion du request_id ---
+    # --- Gestion du request_id    ---
     if not req.request_id:
         req.request_id = str(uuid.uuid4())
 
